@@ -11,11 +11,12 @@
 
 using DaggerfallConnect;
 using UnityEngine;
+using Mirror;
 
 namespace DaggerfallWorkshop.Game
 {
     [RequireComponent(typeof(PlayerMotor))]
-    public class PlayerSpeedChanger : MonoBehaviour
+    public class PlayerSpeedChanger : NetworkBehaviour
     {
         private PlayerMotor playerMotor;
         private LevitateMotor levitateMotor;

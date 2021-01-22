@@ -12,6 +12,7 @@
 using DaggerfallWorkshop.Game.Serialization;
 using UnityEngine;
 using System;
+using Mirror;
 
 namespace DaggerfallWorkshop.Game
 {
@@ -33,7 +34,7 @@ namespace DaggerfallWorkshop.Game
     [RequireComponent(typeof(CharacterController))]
     [RequireComponent(typeof(HeadBobber))]
     [RequireComponent(typeof(LevitateMotor))]
-    public class PlayerHeightChanger : MonoBehaviour
+    public class PlayerHeightChanger : NetworkBehaviour
     {
         private HeightChangeAction heightAction;
         public HeightChangeAction HeightAction

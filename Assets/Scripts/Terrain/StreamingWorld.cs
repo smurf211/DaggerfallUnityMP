@@ -24,6 +24,7 @@ using DaggerfallWorkshop.Utility;
 using DaggerfallWorkshop.Game.Utility;
 using DaggerfallWorkshop.Game.Serialization;
 using Unity.Jobs;
+using Mirror;
 
 namespace DaggerfallWorkshop
 {
@@ -35,8 +36,9 @@ namespace DaggerfallWorkshop
     /// Inactive terrains greater than TerrainDistance+1 from player will be recycled.
     /// Locations and other loose objects greater than TerrainDistance+1 from player will be destroyed.
     /// </summary>
-    public class StreamingWorld : MonoBehaviour
+    public class StreamingWorld : NetworkBehaviour
     {
+        
         #region Fields
 
         const HideFlags defaultHideFlags = HideFlags.None;
@@ -230,6 +232,8 @@ namespace DaggerfallWorkshop
         {
             SaveLoadManager.OnStartLoad += SaveLoadManager_OnStartLoad;
             StartGameBehaviour.OnNewGame += StartGameBehaviour_OnNewGame;
+            
+         
         }
 
         void Update()
@@ -1312,7 +1316,7 @@ namespace DaggerfallWorkshop
         // If position.y is less than terrain height then player will be raised to sit on terrain.
         // If grounded is true, position.y will be unconditionally set to terrain height.
         // Terrain data must already be loaded and LocalGPS must be attached to your player game object.
-        private void RepositionPlayer(int mapPixelX, int mapPixelY, Vector3 position, bool grounded = false)
+       private void RepositionPlayer(int mapPixelX, int mapPixelY, Vector3 position, bool grounded = false)
         {
             // Get terrain key
             int key = TerrainHelper.MakeTerrainKey(mapPixelX, mapPixelY);

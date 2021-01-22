@@ -13,13 +13,14 @@ using UnityEngine;
 using DaggerfallWorkshop.Game.MagicAndEffects;
 using DaggerfallWorkshop.Game.MagicAndEffects.MagicEffects;
 using DaggerfallWorkshop.Game.Questing;
+using Mirror;
 
 namespace DaggerfallWorkshop.Game.Entity
 {
     /// <summary>
     /// Hosts DaggerfallEntity for living GameObjects.
     /// </summary>
-    public class DaggerfallEntityBehaviour : MonoBehaviour
+    public class DaggerfallEntityBehaviour : NetworkBehaviour
     {
         #region Fields
 

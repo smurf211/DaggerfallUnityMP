@@ -21,6 +21,7 @@ using DaggerfallWorkshop.Game.Serialization;
 using DaggerfallWorkshop.Game.UserInterfaceWindows;
 using DaggerfallWorkshop.Game.Entity;
 using DaggerfallWorkshop.Game.MagicAndEffects;
+using Mirror;
 
 namespace DaggerfallWorkshop.Game
 {
@@ -28,7 +29,7 @@ namespace DaggerfallWorkshop.Game
     /// Assist player controller to enter and exit building interiors and dungeons.
     /// Should be attached to player object with PlayerGPS for climate tracking.
     /// </summary>
-    public class PlayerEnterExit : MonoBehaviour
+    public class PlayerEnterExit : NetworkBehaviour
     {
         const HideFlags defaultHideFlags = HideFlags.None;
         UnderwaterFog underwaterFog;

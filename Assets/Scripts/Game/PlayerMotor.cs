@@ -4,6 +4,7 @@ using System.Collections;
 using DaggerfallConnect;
 using DaggerfallWorkshop.Game.Utility;
 using DaggerfallWorkshop.Game.Serialization;
+using Mirror;
 
 namespace DaggerfallWorkshop.Game
 {
@@ -15,7 +16,7 @@ namespace DaggerfallWorkshop.Game
     //
     [RequireComponent(typeof(PlayerSpeedChanger))]
     [RequireComponent(typeof(CharacterController))]
-    public class PlayerMotor : MonoBehaviour
+    public class PlayerMotor : NetworkBehaviour
     {
         #region Fields
 

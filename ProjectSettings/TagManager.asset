@@ -8,6 +8,7 @@ TagManager:
   - QuestFoe
   - QuestItem
   - StaticGeometry
+  - PlayerUnit
   layers:
   - Default
   - TransparentFX
