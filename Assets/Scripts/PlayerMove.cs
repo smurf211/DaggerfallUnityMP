@@ -24,7 +24,7 @@ namespace DaggerfallWorkshop.Game
             
                 //Vector3 playerAdvancedPosition = playerAdvancedObj.transform.position;
                // playerAdvancedPosition.x = playerAdvancedPosition.x -2f;
-               // playerUnitObj.transform.position = playerAdvancedPosition;
+                //playerUnitObj.transform.position = playerAdvancedPosition;
 
 
                 
@@ -86,10 +86,12 @@ namespace DaggerfallWorkshop.Game
 
         public override void OnStartClient(){
             
+            playerAdvancedObj = GameObject.Find("PlayerAdvanced");
+            playerUnitObj = GameObject.Find("PlayerUnit(Clone)");
 
-            //Vector3 playerAdvancedPosition = playerAdvancedObj.transform.position;
-            //playerAdvancedPosition.x = playerAdvancedPosition.x -2f;
-            //playerUnitObj.transform.position = playerAdvancedPosition;
+            Vector3 playerAdvancedPosition = playerAdvancedObj.transform.position;
+            playerAdvancedPosition.x = playerAdvancedPosition.x -2f;
+            playerUnitObj.transform.position = playerAdvancedPosition;
               
             //for(int i =0; i < playerUnitObj.Length; i++){
            // Debug.Log("THE ARRAY OF THE PLAYERUNIT " + playerUnitObj[i].ToString());
