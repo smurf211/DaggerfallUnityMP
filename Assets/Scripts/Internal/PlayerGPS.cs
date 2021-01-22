@@ -24,6 +24,7 @@ using DaggerfallWorkshop.Game.UserInterfaceWindows;
 using DaggerfallWorkshop.Game.Serialization;
 using DaggerfallWorkshop.Game.Banking;
 using DaggerfallWorkshop.Game.MagicAndEffects;
+using Mirror;
 
 namespace DaggerfallWorkshop
 {
@@ -31,7 +32,7 @@ namespace DaggerfallWorkshop
     /// Tracks player position in virtual world space.
     /// Provides information about world around the player.
     /// </summary>
-    public class PlayerGPS : MonoBehaviour
+    public class PlayerGPS : NetworkBehaviour
     {
         #region Fields
 

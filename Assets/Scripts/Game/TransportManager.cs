@@ -13,6 +13,7 @@ using DaggerfallConnect.Arena2;
 using DaggerfallConnect.Utility;
 using DaggerfallWorkshop.Game.Banking;
 using DaggerfallWorkshop.Game.Items;
+using Mirror;
 
 namespace DaggerfallWorkshop.Game
 {
@@ -29,7 +30,7 @@ namespace DaggerfallWorkshop.Game
 
     #endregion
 
-    public class TransportManager : MonoBehaviour
+    public class TransportManager : NetworkBehaviour
     {
         #region Public Fields
 

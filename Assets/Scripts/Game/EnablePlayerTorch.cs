@@ -12,6 +12,7 @@
 using UnityEngine;
 using DaggerfallWorkshop.Game.Items;
 using DaggerfallWorkshop.Game.Entity;
+using Mirror;
 
 namespace DaggerfallWorkshop.Game
 {
@@ -19,7 +20,7 @@ namespace DaggerfallWorkshop.Game
     /// Enable or disable player torch.
     /// This component is used by Workshop demo scenes.
     /// </summary>
-    public class EnablePlayerTorch : MonoBehaviour
+    public class EnablePlayerTorch : NetworkBehaviour
     {
         public GameObject PlayerTorch;
 

@@ -12,6 +12,7 @@
 using UnityEngine;
 using System.Collections;
 using DaggerfallWorkshop.Utility;
+using Mirror;
 
 namespace DaggerfallWorkshop.Game
 {
@@ -20,7 +21,7 @@ namespace DaggerfallWorkshop.Game
     /// For example, Daggerfall scales ambient light up and down in dungeons with castle blocks (e.g. Wayrest).
     /// Ambient light is dimmed when player leaves castle block and brightened on return.
     /// </summary>
-    public class PlayerAmbientLight : MonoBehaviour
+    public class PlayerAmbientLight : NetworkBehaviour
     {
         public Color ExteriorNoonAmbientLight = new Color(0.9f, 0.9f, 0.9f);
         public Color ExteriorNightAmbientLight = new Color(0.25f, 0.25f, 0.25f);

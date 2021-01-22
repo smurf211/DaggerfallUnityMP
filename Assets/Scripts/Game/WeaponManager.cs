@@ -22,6 +22,7 @@ using DaggerfallWorkshop.Game.MagicAndEffects;
 using DaggerfallWorkshop.Game.MagicAndEffects.MagicEffects;
 using DaggerfallWorkshop.Game.Utility;
 using DaggerfallWorkshop.Utility;
+using Mirror;
 
 namespace DaggerfallWorkshop.Game
 {
@@ -29,7 +30,7 @@ namespace DaggerfallWorkshop.Game
     /// Support for mouse attack gestures, weapon state firing, and damage transfer.
     /// Should only be attached to player game object.
     /// </summary>
-    public class WeaponManager : MonoBehaviour
+    public class WeaponManager : NetworkBehaviour
     {
         const float defaultBowReach = 50f;
         public const float defaultWeaponReach = 2.25f;

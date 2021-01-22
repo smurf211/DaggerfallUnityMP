@@ -25,13 +25,14 @@ using DaggerfallWorkshop.Utility;
 using DaggerfallWorkshop.Game.Questing;
 using DaggerfallWorkshop.Game.Guilds;
 using DaggerfallWorkshop.Game.MagicAndEffects;
+using Mirror;
 
 namespace DaggerfallWorkshop.Game
 {
     /// <summary>
     /// GameManager singleton class.
     /// </summary>
-    public class GameManager : MonoBehaviour
+    public class GameManager : NetworkBehaviour
     {
         #region Fields
         public const float classicUpdateInterval = 0.0625f;        // Update every 1/16 of a second. An approximation of classic's update loop, which varies with framerate.

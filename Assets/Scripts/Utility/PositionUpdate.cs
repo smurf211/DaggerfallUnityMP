@@ -1,4 +1,4 @@
-﻿// Project:         Daggerfall Tools For Unity
+// Project:         Daggerfall Tools For Unity
 // Copyright:       Copyright (C) 2009-2020 Daggerfall Workshop
 // Web Site:        http://www.dfworkshop.net
 // License:         MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -11,13 +11,14 @@
 
 using UnityEngine;
 using System.Collections;
+using Mirror;
 
 ///Attach to parent gameobject that isn't already updated by floating origin.
 ///Will update the transform position + any particles, unless bools are set to false.
 ///
 namespace DaggerfallWorkshop.Utility
 {
-    public class PositionUpdate : MonoBehaviour
+    public class PositionUpdate : NetworkBehaviour
     {
         
         public bool updateTransform = true;

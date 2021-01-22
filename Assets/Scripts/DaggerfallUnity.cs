@@ -25,6 +25,7 @@ using DaggerfallWorkshop.Game;
 using DaggerfallWorkshop.Game.Items;
 using DaggerfallWorkshop.Game.Utility;
 using DaggerfallWorkshop.Game.Utility.ModSupport;
+using Mirror;
 
 namespace DaggerfallWorkshop
 {
@@ -38,7 +39,7 @@ namespace DaggerfallWorkshop
     [RequireComponent(typeof(MaterialReader))]
     [RequireComponent(typeof(MeshReader))]
     [RequireComponent(typeof(SoundReader))]
-    public class DaggerfallUnity : MonoBehaviour
+    public class DaggerfallUnity : NetworkBehaviour
     {
         #region Fields
 

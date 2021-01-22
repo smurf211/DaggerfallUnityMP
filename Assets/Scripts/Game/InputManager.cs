@@ -18,13 +18,14 @@ using System.IO;
 using FullSerializer;
 using DaggerfallWorkshop.Game.Serialization;
 using System.Linq;
+using Mirror;
 
 namespace DaggerfallWorkshop.Game
 {
     /// <summary>
     /// InputManager singleton class for Daggerfall-specific game actions.
     /// </summary>
-    public class InputManager : MonoBehaviour
+    public class InputManager : NetworkBehaviour
     {
         #region Fields
 

@@ -1,4 +1,4 @@
-﻿// Project:         Daggerfall Tools For Unity
+// Project:         Daggerfall Tools For Unity
 // Copyright:       Copyright (C) 2009-2020 Daggerfall Workshop
 // Web Site:        http://www.dfworkshop.net
 // License:         MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -11,11 +11,12 @@
 
 using UnityEngine;
 using System.Collections;
+using Mirror;
 
 namespace DaggerfallWorkshop.Game
 {
 
-    public class PlayerCollision : MonoBehaviour
+    public class PlayerCollision : NetworkBehaviour
     {
         GameObject cachedObject;
         PlayerCollisionHandler cachedCH;
