@@ -18,13 +18,14 @@ using System.Collections.Generic;
 using System.Linq;
 using DaggerfallWorkshop.Game.Items;
 using DaggerfallConnect.Arena2;
+using Mirror;
 
 namespace DaggerfallWorkshop.Game.Serialization
 {
     /// <summary>
     /// Implements Player serialization. Should be attached to Player GameObject.
     /// </summary>
-    public class SerializablePlayer : MonoBehaviour, ISerializableGameObject
+    public class SerializablePlayer : NetworkBehaviour, ISerializableGameObject
     {
         #region Fields
 

@@ -17,12 +17,13 @@ using System.IO;
 using DaggerfallConnect;
 using DaggerfallConnect.Utility;
 using DaggerfallConnect.Arena2;
+using Mirror;
 
 namespace DaggerfallWorkshop
 {
     [RequireComponent(typeof(MeshFilter))]
     [RequireComponent(typeof(MeshRenderer))]
-    public class DaggerfallMesh : MonoBehaviour
+    public class DaggerfallMesh : NetworkBehaviour
     {
         [SerializeField]
         private List<int> defaultTextures = new List<int>();

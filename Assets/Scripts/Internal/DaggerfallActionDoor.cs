@@ -17,6 +17,7 @@ using DaggerfallWorkshop.Game.UserInterfaceWindows;
 using DaggerfallWorkshop.Game.Entity;
 using DaggerfallWorkshop.Game.Formulas;
 using DaggerfallWorkshop.Game.Utility;
+using Mirror;
 
 namespace DaggerfallWorkshop
 {
@@ -25,7 +26,7 @@ namespace DaggerfallWorkshop
     /// </summary>
     [RequireComponent(typeof(AudioSource))]
     [RequireComponent(typeof(BoxCollider))]
-    public class DaggerfallActionDoor : MonoBehaviour
+    public class DaggerfallActionDoor : NetworkBehaviour
     {
         public bool StartOpen = false;                  // Door should start in open state
         public int CurrentLockValue = 0;                // if > 0, door is locked. Can check w. IsLocked prop

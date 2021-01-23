@@ -11,6 +11,7 @@
 
 using UnityEngine;
 using System.Collections;
+using Mirror;
 
 namespace DaggerfallWorkshop
 {
@@ -21,7 +22,7 @@ namespace DaggerfallWorkshop
     /// </summary>
     [RequireComponent(typeof(AudioSource))]
     [RequireComponent(typeof(BoxCollider))]
-    public class DaggerfallActionDoorSpecial : MonoBehaviour
+    public class DaggerfallActionDoorSpecial : NetworkBehaviour
     {
         public bool StartOpen = false;                  // Door should start in open state
         public float OpenAngle = -90f;                  // Angle to swing door on axis when opening

@@ -13,6 +13,7 @@ using UnityEngine;
 using System.Collections;
 using System;
 using DaggerfallWorkshop.Utility;
+using Mirror;
 
 namespace DaggerfallWorkshop
 {
@@ -24,7 +25,7 @@ namespace DaggerfallWorkshop
     /// pattern is to simply check the DaggerfallUnity.Singleton.WorldTime.Now in Update() of each object.
     /// See DaggerfallLight.cs for an example of reading time directly for lights on/off.
     /// </summary>
-    public class WorldTime : MonoBehaviour
+    public class WorldTime : NetworkBehaviour
     {
         [HideInInspector]
         public DaggerfallDateTime DaggerfallDateTime = new DaggerfallDateTime();

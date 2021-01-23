@@ -19,13 +19,14 @@ using DaggerfallWorkshop.Game.UserInterfaceWindows;
 using DaggerfallWorkshop.Game;
 using DaggerfallWorkshop.Game.Entity;
 using DaggerfallWorkshop.Game.MagicAndEffects;
+using Mirror;
 
 namespace DaggerfallWorkshop
 {
     /// <summary>
     /// Defines and executes Daggerfall action records.
     /// </summary>
-    public class DaggerfallAction : MonoBehaviour
+    public class DaggerfallAction : NetworkBehaviour
     {
         public const int TYPE_11_TEXT_INDEX = 8600;
         public const int TYPE_12_TEXT_INDEX = 5400;

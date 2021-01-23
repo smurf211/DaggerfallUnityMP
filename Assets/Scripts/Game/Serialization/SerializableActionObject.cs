@@ -14,10 +14,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using FullSerializer;
+using Mirror;
 
 namespace DaggerfallWorkshop.Game.Serialization
 {
-    public class SerializableActionObject : MonoBehaviour, ISerializableGameObject
+    public class SerializableActionObject : NetworkBehaviour, ISerializableGameObject
     {
         #region Fields
 

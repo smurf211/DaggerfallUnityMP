@@ -14,13 +14,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using FullSerializer;
+using Mirror;
 
 namespace DaggerfallWorkshop.Game.Serialization
 {
     /// <summary>
     /// Implements ActionDoor serialization. Should be attached to every DaggerfallActionDoor GameObject.
     /// </summary>
-    public class SerializableActionDoor : MonoBehaviour, ISerializableGameObject
+    public class SerializableActionDoor : NetworkBehaviour, ISerializableGameObject
     {
         #region Fields
 

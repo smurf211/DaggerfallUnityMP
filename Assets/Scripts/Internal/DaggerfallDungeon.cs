@@ -21,10 +21,11 @@ using DaggerfallConnect.Arena2;
 using DaggerfallConnect.Utility;
 using DaggerfallWorkshop.Utility;
 using DaggerfallWorkshop.Game;
+using Mirror;
 
 namespace DaggerfallWorkshop
 {
-    public class DaggerfallDungeon : MonoBehaviour
+    public class DaggerfallDungeon : NetworkBehaviour
     {
         bool isSet = false;
         DaggerfallUnity dfUnity;
