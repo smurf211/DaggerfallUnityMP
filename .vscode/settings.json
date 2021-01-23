@@ -64,7 +64,8 @@
     "[csharp]": {
         "editor.detectIndentation": false,
         "editor.insertSpaces": true,
-        "editor.tabSize": 4
+        "editor.tabSize": 4,
+        "editor.quickSuggestions":  true
     },
     // Json schemas
     "json.schemas": [
