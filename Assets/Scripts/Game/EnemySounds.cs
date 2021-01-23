@@ -12,6 +12,7 @@
 using UnityEngine;
 using System.Collections;
 using DaggerfallWorkshop.Utility;
+using Mirror;
 
 namespace DaggerfallWorkshop.Game
 {
@@ -20,7 +21,7 @@ namespace DaggerfallWorkshop.Game
     /// Handles attract and attack sounds.
     /// </summary>
     [RequireComponent(typeof(DaggerfallAudioSource))]
-    public class EnemySounds : MonoBehaviour
+    public class EnemySounds : NetworkBehaviour
     {
         public float AttractRadius = 16f;           // Range at which enemy will play attract sounds like "move" and "bark"
         public int MinAttractDelay = 3;             // Minimum time between attract sounds

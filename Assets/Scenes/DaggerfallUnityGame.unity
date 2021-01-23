@@ -718,6 +718,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0de185bad246eaf478cff5b6517e12a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   Verbose: 0
 --- !u!4 &324067382
 Transform:
@@ -1175,7 +1177,11 @@ MonoBehaviour:
     type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
-  spawnPrefabs: []
+  spawnPrefabs:
+  - {fileID: 122440, guid: 829d47869fdd54e48b9424565c0108ec, type: 3}
+  - {fileID: 118732, guid: 8bcd7eec5b47e7b4a97244dcfe9b6a98, type: 3}
+  - {fileID: 140354, guid: 81f9cc3450e0e0d4b8f609fa31938b81, type: 3}
+  - {fileID: 0}
 --- !u!4 &669260682
 Transform:
   m_ObjectHideFlags: 0
@@ -2239,6 +2245,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b46be800caa39e46b20653fe90c41f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   controllerCursorImage: {fileID: 2800000, guid: 887ec86cd12e1624d8458c8d7950402a,
     type: 3}
 --- !u!4 &1606437057

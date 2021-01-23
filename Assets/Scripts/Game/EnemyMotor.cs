@@ -14,6 +14,7 @@ using DaggerfallWorkshop.Game.Entity;
 using DaggerfallWorkshop.Game.MagicAndEffects;
 using System.Collections.Generic;
 using DaggerfallWorkshop.Utility;
+using Mirror;
 
 namespace DaggerfallWorkshop.Game
 {
@@ -25,7 +26,7 @@ namespace DaggerfallWorkshop.Game
     [RequireComponent(typeof(EnemyBlood))]
     [RequireComponent(typeof(EnemySounds))]
     [RequireComponent(typeof(CharacterController))]
-    public class EnemyMotor : MonoBehaviour
+    public class EnemyMotor : NetworkBehaviour
     {
 
         #region Member Variables

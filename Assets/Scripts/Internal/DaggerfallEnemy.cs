@@ -12,13 +12,14 @@
 using UnityEngine;
 using DaggerfallWorkshop.Game;
 using DaggerfallWorkshop.Game.Entity;
+using Mirror;
 
 namespace DaggerfallWorkshop
 {
     /// <summary>
     /// Stores enemy settings for serialization and other tasks.
     /// </summary>
-    public class DaggerfallEnemy : MonoBehaviour
+    public class DaggerfallEnemy : NetworkBehaviour
     {
         ulong loadID = 0;
         bool questSpawn = false;

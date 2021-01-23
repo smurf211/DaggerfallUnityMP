@@ -11,6 +11,8 @@
 
 using UnityEngine;
 using System.Collections;
+using Mirror;
+
 
 namespace DaggerfallWorkshop.Game
 {
@@ -19,7 +21,7 @@ namespace DaggerfallWorkshop.Game
     /// Note: Deprecated. For standalone DFTFU scenes only.
     /// </summary>
     [RequireComponent(typeof(EnemyBlood))]
-    public class EnemyHealth : MonoBehaviour
+    public class EnemyHealth : NetworkBehaviour
     {
         public float Health = 50f;
 

@@ -16,6 +16,7 @@ using DaggerfallWorkshop.Game.Formulas;
 using DaggerfallWorkshop.Game.UserInterfaceWindows;
 using DaggerfallWorkshop.Game.MagicAndEffects;
 using DaggerfallWorkshop.Game.Utility;
+using Mirror;
 
 namespace DaggerfallWorkshop.Game
 {
@@ -23,7 +24,7 @@ namespace DaggerfallWorkshop.Game
     /// Temporary enemy attack.
     /// </summary>
     [RequireComponent(typeof(EnemySenses))]
-    public class EnemyAttack : MonoBehaviour
+    public class EnemyAttack : NetworkBehaviour
     {
         public const float minRangedDistance = 240 * MeshReader.GlobalScale; // 6m
         public const float maxRangedDistance = 2048 * MeshReader.GlobalScale; // 51.2m

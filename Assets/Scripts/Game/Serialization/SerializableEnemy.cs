@@ -17,10 +17,11 @@ using FullSerializer;
 using DaggerfallWorkshop.Game.Entity;
 using DaggerfallWorkshop.Game.Questing;
 using DaggerfallWorkshop.Game.MagicAndEffects;
+using Mirror;
 
 namespace DaggerfallWorkshop.Game.Serialization
 {
-    public class SerializableEnemy : MonoBehaviour, ISerializableGameObject
+    public class SerializableEnemy : NetworkBehaviour, ISerializableGameObject
     {
         #region Fields
 

@@ -16,13 +16,14 @@ using DaggerfallWorkshop.Game.Serialization;
 using DaggerfallWorkshop.Game.Entity;
 using DaggerfallWorkshop.Game.UserInterfaceWindows;
 using DaggerfallWorkshop.Game.Questing;
+using Mirror;
 
 namespace DaggerfallWorkshop.Game
 {
     /// <summary>
     /// Handles enemy death.
     /// </summary>
-    public class EnemyDeath : MonoBehaviour
+    public class EnemyDeath : NetworkBehaviour
     {
         #region Fields
 

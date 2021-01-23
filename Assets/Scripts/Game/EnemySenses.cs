@@ -17,13 +17,13 @@ using DaggerfallConnect;
 using DaggerfallWorkshop.Game.UserInterfaceWindows;
 using DaggerfallWorkshop.Game.Questing;
 using DaggerfallWorkshop.Game.Utility;
-
+using Mirror;
 namespace DaggerfallWorkshop.Game
 {
     /// <summary>
     /// Example enemy senses.
     /// </summary>
-    public class EnemySenses : MonoBehaviour
+    public class EnemySenses : NetworkBehaviour
     {
         public static readonly Vector3 ResetPlayerPos = new Vector3(float.MaxValue, float.MaxValue, float.MaxValue);
 
