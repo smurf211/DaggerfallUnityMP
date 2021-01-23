@@ -31,7 +31,10 @@ namespace DaggerfallWorkshop.Game
                 if (playerAdvancedObj != null)
                 {
                     Vector3 playerAdvancedPosition = playerAdvancedObj.transform.position;
+                    //playerAdvancedPosition.x = playerAdvancedPosition.x -1f;
+                    playerAdvancedPosition.y = playerAdvancedPosition.y +0.15f;
                     transform.position = playerAdvancedPosition;
+
                 }
                 //Debug.Log("Player Advanced Pos: " + playerAdvancedPosition);
                 // playerAdvancedPosition.x = playerAdvancedPosition.x ;
@@ -112,8 +115,9 @@ namespace DaggerfallWorkshop.Game
                 playerUnitObj = GameObject.Find("PlayerSprite(Clone)");
 
                 Vector3 playerAdvancedPosition = playerAdvancedObj.transform.position;
-                playerAdvancedPosition.x = playerAdvancedPosition.x -2f;
-                playerUnitObj.transform.position = playerAdvancedPosition;
+                //playerAdvancedPosition.x = playerAdvancedPosition.x -1f;
+                playerAdvancedPosition.y = playerAdvancedPosition.y +0.15f;
+                transform.position = playerAdvancedPosition;
             }
 
             
