@@ -30,7 +30,7 @@ namespace DaggerfallWorkshop.Game
 
 
                 Vector3 playerAdvancedPosition = playerAdvancedObj.transform.position;
-                Debug.Log("Player Advanced Pos: " + playerAdvancedPosition);
+                //Debug.Log("Player Advanced Pos: " + playerAdvancedPosition);
                 // playerAdvancedPosition.x = playerAdvancedPosition.x ;
                 //playerAdvancedPosition.y = playerAdvancedPosition.y + 1f;
                 transform.position = playerAdvancedPosition;
