@@ -3,34 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class PlayerBillboardDeprecated : NetworkBehaviour
- {
-    private GameObject playerAdvancedObj = null;
+public class PlayerBillboardDeprecated : MonoBehaviour
+{
  
-    void Update() 
+    // Update is called once per frame
+    void Update()
     {
-       
-            playerAdvancedObj = GameObject.Find("PlayerAdvanced");
-
-            Vector3 playerAdvancedPosition = playerAdvancedObj.transform.position;
-
-        var distance = playerAdvancedPosition - Camera.main.transform.position;
-        //Debug.Log("DISTANCE TO CAMERA " + distance);
-
-        if(isLocalPlayer && distance.x < 1){
-        GetComponent<Renderer>().enabled = false;
-         }
-         else
-          {
-          GetComponent<Renderer>().enabled = true;
-
-
+        //transform.LookAt(Camera.main.transform.position, -Vector3.up);
         Vector3 v = Camera.main.transform.position - transform.position;
-
-
-            v.x = v.z = 0.0f;
-            transform.LookAt(Camera.main.transform.position - v);
-        }
+        v.x = v.z = 0.0f;
+        transform.LookAt(Camera.main.transform.position - v); 
 
     }
- }
+}
