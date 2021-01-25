@@ -32,7 +32,9 @@ namespace DaggerfallWorkshop
         public int CurrentLockValue = 0;                // if > 0, door is locked. Can check w. IsLocked prop
         public float OpenAngle = -90f;                  // Angle to swing door on axis when opening
         public float OpenDuration = 1.5f;               // How long in seconds for door to open
+        //[Syncvar]               
         public bool IsTriggerWhenOpen = true;           // Collider is disabled when door opens
+        //[Syncvar] 
         public bool PlaySounds = true;                  // Play open and close sounds if present (OpenSound > 0, CloseSound > 0)
         public short FailedSkillLevel = 0;              // Lockpicking skill of player when they failed to pick lock (TODO: persist across save and load)
 
@@ -111,6 +113,7 @@ namespace DaggerfallWorkshop
                 Open(0, true);
         }
 
+        
         public void ToggleDoor(bool activatedByPlayer = false)
         {
             if (IsMoving)
@@ -239,6 +242,7 @@ namespace DaggerfallWorkshop
 
         #region Private Methods
 
+        
         private void Open(float duration, bool ignoreLocks = false, bool activatedByPlayer = false, float scale = 1)
         {
             // Handle DoorText actions. On first activation, show the text but don't try to open the door.

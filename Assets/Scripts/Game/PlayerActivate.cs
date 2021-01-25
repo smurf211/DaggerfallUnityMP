@@ -26,6 +26,7 @@ using DaggerfallWorkshop.Utility.AssetInjection;
 using DaggerfallWorkshop.Game.Utility;
 using DaggerfallWorkshop.Game.Formulas;
 using DaggerfallWorkshop.Game.Utility.ModSupport;
+using Mirror;
 
 namespace DaggerfallWorkshop.Game
 {
@@ -45,7 +46,7 @@ namespace DaggerfallWorkshop.Game
     /// <summary>
     /// Example class to handle activation of doors, switches, etc. from Fire1 input.
     /// </summary>
-    public class PlayerActivate : MonoBehaviour
+    public class PlayerActivate : NetworkBehaviour
     {
         PlayerGPS playerGPS;
         PlayerEnterExit playerEnterExit;        // Example component to enter/exit buildings
@@ -197,6 +198,21 @@ namespace DaggerfallWorkshop.Game
             playerLayerMask = ~(1 << LayerMask.NameToLayer("Player"));
         }
 
+        [TargetRpc]
+        void ReplyHola()
+        {
+            Debug.Log("Received hola from server");
+        }
+
+
+          [Command]
+        void Hola()
+        {
+            Debug.Log("recieved hola from client!");
+            //holaCount += 1;
+            ReplyHola();
+        }
+        
         void Update()
         {
             if (mainCamera == null)
@@ -423,10 +439,13 @@ namespace DaggerfallWorkshop.Game
 
                     // Debug for identifying interior furniture model ids.
                     Debug.Log(string.Format("hit='{0}' static={1}", hit.transform, GameObjectHelper.IsStaticGeometry(hit.transform.gameObject)));
+                    Hola();
                     #endregion
                 }
             }
         }
+
+         
 
         #region Activation Logic
 
@@ -620,7 +639,8 @@ namespace DaggerfallWorkshop.Game
         {
             return GetBuildingLockValue(buildingSummary.Quality);
         }
-
+       
+       
         void ActivateActionDoor(RaycastHit hit, DaggerfallActionDoor actionDoor)
         {
             // Check if close enough to activate
@@ -641,6 +661,12 @@ namespace DaggerfallWorkshop.Game
                 actionDoor.AttemptLockpicking();
             }
             else
+                CmdToggleDoorNetwork(actionDoor);
+                Debug.Log("Getting in here");
+        }
+
+        //[Command]
+        void CmdToggleDoorNetwork(DaggerfallActionDoor actionDoor){
                 actionDoor.ToggleDoor(true);
         }
 

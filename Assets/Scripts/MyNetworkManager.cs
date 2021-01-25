@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class MyNetworkManager : NetworkManager
+public class MyNetworkManager : NetworkManager 
 {
     // Start is called before the first frame update
-
+    private GameObject playerAdvancedObj = null;
     public override void OnStartServer()
     {
         Debug.Log("Server Started");
@@ -14,6 +14,9 @@ public class MyNetworkManager : NetworkManager
 
     public override void OnStopServer()
     {
+       
+              
+    
         Debug.Log("Server Stopped!");
     }
 
