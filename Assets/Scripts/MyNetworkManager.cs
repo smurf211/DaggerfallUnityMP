@@ -7,8 +7,17 @@ public class MyNetworkManager : NetworkManager
 {
     // Start is called before the first frame update
     private GameObject playerAdvancedObj = null;
+    private GameObject gameManagerObj = null;
     public override void OnStartServer()
     {
+
+                 //playerAdvancedObj = GameObject.Find("PlayerAdvanced");
+                //playerUnitObj = GameObject.Find("PlayerUnit(Clone)");
+               // gameManagerObj = GameObject.Find("GameManager");
+               // NetworkServer.Spawn(playerAdvancedObj);
+               // Debug.Log("Spawned player advanced & Game Manager");
+               // NetworkServer.Spawn(gameManagerObj);
+
         Debug.Log("Server Started");
     }
 

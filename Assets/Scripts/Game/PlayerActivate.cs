@@ -665,7 +665,7 @@ namespace DaggerfallWorkshop.Game
                 Debug.Log("Getting in here");
         }
 
-        //[Command]
+        [Server]
         void CmdToggleDoorNetwork(DaggerfallActionDoor actionDoor){
                 actionDoor.ToggleDoor(true);
         }
